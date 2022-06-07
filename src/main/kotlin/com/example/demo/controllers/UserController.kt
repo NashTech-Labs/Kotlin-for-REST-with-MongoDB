@@ -33,6 +33,7 @@ class UserController (private val userRepository: UserRepository) {
         return ResponseEntity.ok(this.userRepository.save(user))
     }
 
+    //delete mapping
     @DeleteMapping("/{id}")
     fun deleteUser(@PathVariable id: String) : ResponseEntity<String> {
         this.userRepository.deleteById(id)
